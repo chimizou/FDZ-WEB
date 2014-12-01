@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="edu/esprit/web/converter/CategoryConverter.java|edu/esprit/web/mbeans/CategoryBean.java|edu/esprit/web/mbeans/HelperBean.java|edu/esprit/web/mbeans/ProductBean.java|edu/esprit/web/mbeans/ShopBean.java|edu/esprit/web/mbeans/ProductImageBean.java" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.jboss.ide.eclipse.as.core.server.runtime.runtimeTarget/JBoss 7.1 Runtime">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web;jst.jsf"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FDZ-Serv"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

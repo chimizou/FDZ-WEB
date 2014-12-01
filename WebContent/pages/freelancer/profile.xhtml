@@ -1,0 +1,32 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+
+	<ui:define name="pageTitle">Profile</ui:define>
+	<ui:define name="pageContent">
+		<section id="inner-headline">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<ul class="breadcrumb">
+							<li><a href="#"><i class="fa fa-home"></i></a><i
+								class="icon-angle-right"></i></li>
+							<li class="active">Profile</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="content">
+			<div class="container">
+				<div class="container">
+				<h2>#{authBean.user.prenom} #{authBean.user.nom}</h2>
+				<p>email: #{authBean.user.email}</p>
+			</div>
+			</div>
+		</section>
+	</ui:define>
+</ui:composition>

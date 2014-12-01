@@ -1,0 +1,61 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+
+	<ui:define name="pageTitle">Profile</ui:define>
+	<ui:define name="pageContent">
+		<section id="inner-headline">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<ul class="breadcrumb">
+							<li><a href="#"><i class="fa fa-home"></i></a><i
+								class="icon-angle-right"></i></li>
+							<li class="active">Profile</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="content">
+			<div class="container">
+				<div class="container">
+					<h2>Settings</h2>
+					<h:form id="setting_form">
+					<span class="pull-right margintop20"><h:commandButton id="disable_submit"
+								action="#{authBean.doEnable()}" value="Enable Account" /></span>
+<!-- 					<a href="#" class="btn btn-small btn-danger" id="disable_submit" action="#{authBean.doSave()}">Disable account</a> -->
+					<br/>
+					
+
+						<h:panelGrid columns="2">
+							<h:outputText value="name" />
+							<h:inputText value="#{authBean.user.prenom}" />
+							<h:outputText value="last name" />
+							<h:inputText value="#{authBean.user.nom}" />
+							<h:outputText value="email" />
+							<h:inputText value="#{authBean.user.email}" />
+							<h:outputText value="country" />
+							<h:inputText value="#{authBean.user.country}" />
+
+						</h:panelGrid>
+
+<!-- 							<ui:include src="/pages/freelancer/picture.xhtml" />	 -->
+
+						<br />
+						<h:panelGrid columns="4">
+							<h:commandButton action="#{authBean.doCancel}" value="cancel" />
+							<h:commandButton id="setting_submit"
+								action="#{authBean.doSave()}" value="save" />
+<!-- 							<h:message for="setting_submit" styleClass="error" /> -->
+							<h:message for="disable_submit" styleClass="error" />
+						</h:panelGrid>
+					</h:form>
+				</div>
+			</div>
+		</section>
+	</ui:define>
+</ui:composition>
